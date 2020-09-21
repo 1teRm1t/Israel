@@ -1,0 +1,94 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -80px;
+  height: 878px;
+
+  background-image: url("../img/header-girl.png"), url("../img/header-text.png"), url("../img/header-backdrop.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom 95%, center 160px, center;
+  background-size: cover, 74.5%, cover;
+}
+
+.promo__title {
+  max-width: 343px;
+  margin: auto auto 281px;
+
+  font-family: $main-bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+
+  color: $white;
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.promo__btn {
+  position: absolute;
+
+  left: 50%;
+  bottom: 185px;
+
+  width: 54px;
+  height: 54px;
+  margin-left: -26px;
+
+  background-image: url("../img/mouse.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+
+  border: 1px solid $white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: -11px;
+
+    border: 1px dashed $white;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 63px;
+
+    width: 0;
+    height: 55.5px;
+
+    border: 1px solid $white;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    height: 536px;
+    margin-top: 0;
+    background-image: url("../img/header-girl-mobile.png"), url("../img/header-text-mobile.png"), url("../img/header-backdrop-mobile.jpg");
+    background-position: center -51px, center 85px, center -50px;
+    background-size: cover, contain, cover;
+  }
+
+  .promo__title {
+    margin-bottom: 235px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .promo__btn {
+    bottom: 138px;
+  }
+}

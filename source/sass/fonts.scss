@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "FiraSans-Regular";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local("FiraSans-Regular"),
+    url("../fonts/FiraSans-Regular.woff2") format("woff2"),
+    url("../fonts/FiraSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-Medium";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: local("FiraSans-Medium"),
+    url("../fonts/FiraSans-Medium.woff2") format("woff2"),
+    url("../fonts/FiraSans-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-Bold";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local("FiraSans-Bold"),
+    url("../fonts/FiraSans-Bold.woff2") format("woff2"),
+    url("../fonts/FiraSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local("Montserrat-Bold"),
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+}
