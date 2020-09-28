@@ -1,0 +1,92 @@
+.photo {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 583px;
+  padding: 121px 0 150px;
+
+  background-image: url("../img/photo-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    background-image: url("../img/photo-bg@2x.jpg");
+  }
+}
+
+.photo--indent {
+  margin-bottom: 56px;
+}
+
+.photo__wrap {
+  width: 29.3%;
+  margin-right: 170px;
+}
+
+.photo__title {
+  margin-bottom: 25px;
+
+  font-family: $title-main;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  color: $cyan;
+}
+
+.photo__text {
+  margin-bottom: 49px;
+  padding-left: 4px;
+
+  font-family: $main-regular;
+  font-size: 17px;
+  line-height: 29px;
+
+  color: $white;
+
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  opacity: 0.87;
+}
+
+.photo__btn {
+  position: relative;
+
+  width: 230px;
+  padding-left: 71px;
+
+  text-decoration: none;
+}
+
+@media (max-width: $mobile-width) {
+  .photo {
+    min-height: auto;
+
+    background-image: url("../img/photo-bg-mobile.jpg");
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/photo-bg-mobile@2x.jpg");
+    }
+  }
+
+  .photo__wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .photo__text {
+    padding: 22% 7% 15.5%;
+
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+  }
+
+  .photo__btn {
+    width: 264px;
+    margin: 0 auto;
+  }
+}

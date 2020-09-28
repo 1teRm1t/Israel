@@ -5,10 +5,14 @@
   margin-top: -80px;
   height: 878px;
 
-  background-image: url("../img/header-girl.png"), url("../img/header-text.png"), url("../img/header-backdrop.jpg");
+  background-image: url("../img/promo-girl.png"), url("../img/promo-text.png"), url("../img/promo-backdrop.jpg");
   background-repeat: no-repeat;
   background-position: center bottom 95%, center 160px, center;
   background-size: cover, 74.5%, cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/promo-girl@2x.png"), url("../img/promo-text@2x.png"), url("../img/promo-backdrop@2x.jpg");
+  }
 }
 
 .promo__title {
@@ -76,9 +80,13 @@
   .promo {
     height: 536px;
     margin-top: 0;
-    background-image: url("../img/header-girl-mobile.png"), url("../img/header-text-mobile.png"), url("../img/header-backdrop-mobile.jpg");
+    background-image: url("../img/promo-girl-mobile.png"), url("../img/promo-text-mobile.png"), url("../img/promo-backdrop-mobile.jpg");
     background-position: center -51px, center 85px, center -50px;
     background-size: cover, contain, cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo-girl-mobile@2x.png"), url("../img/promo-text-mobile@2x.png"), url("../img/promo-backdrop-mobile@2x.jpg");
+    }
   }
 
   .promo__title {

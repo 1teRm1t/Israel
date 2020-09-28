@@ -1,0 +1,19 @@
+.btn {
+  display: block;
+  padding: 19px 40px 20px;
+
+  font-family: $main-medium;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  text-align: center;
+
+  color: $white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  border-radius: 80px;
+  border: none;
+
+  cursor: pointer;
+}

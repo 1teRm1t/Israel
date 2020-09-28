@@ -1,0 +1,266 @@
+.programs {
+  padding-top: 49px;
+
+  background-image: url("../img/programms-bg.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 50%;
+}
+
+.programs--indent {
+  margin-bottom: 48px;
+}
+
+.programs__wrap {
+  width: 69.1%;
+  margin: 0 auto;
+}
+
+.programs__title {
+  margin-bottom: 67px;
+
+  font-family: $title-main;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  color: $cyan;
+}
+
+.programs__inner {
+  display: flex;
+}
+
+.programs__tabs {
+  margin-right: 63px;
+}
+
+.programs__list {
+  list-style: none;
+}
+
+.programs__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 228px;
+  min-height: 68px;
+  margin-bottom: 4px;
+  padding-left: 72px;
+  padding-right: 30px;
+
+  font-family: $main-regular;
+  font-size: 15px;
+  line-height: 18px;
+
+  cursor: pointer;
+  opacity: 0.87;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.programs__item--active {
+  position: relative;
+
+  font-family: $main-medium;
+  font-size: 16px;
+  line-height: 19px;
+  font-variant: small-caps;
+
+  color: $white;
+
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 0;
+    right: -34px;
+
+    width: 0;
+    height: 0;
+
+    border: 34px solid white;
+    border-left-color: transparent;
+  }
+}
+
+.programs__item:not(.programs__item--active):hover {
+  color: transparent;
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  background-clip: text;
+  opacity: 0.87;
+}
+
+.programs__item:not(.programs__item--active):active {
+  opacity: 0.4;
+}
+
+.programs__item:not(.programs__item--active):hover .programs__icon--common {
+  background-image: url("../img/icon-common-hover.png");
+}
+
+.programs__item:not(.programs__item--active):hover .programs__icon--academic {
+  background-image: url("../img/icon-academic-hover.png");
+}
+
+.programs__item:not(.programs__item--active):hover .programs__icon--internship {
+  background-image: url("../img/icon-internship-hover.png");
+}
+
+.programs__item:not(.programs__item--active):hover .programs__icon--volunteer {
+  background-image: url("../img/icon-volunteer-hover.png");
+}
+
+.programs__item:not(.programs__item--active):hover .programs__icon--religion {
+  background-image: url("../img/icon-religion-hover.png");
+}
+
+.programs__item--active .programs__icon--common {
+  background-image: url("../img/icon-common-active.png");
+}
+
+.programs__item--active .programs__icon--academic {
+  background-image: url("../img/icon-academic-active.png");
+}
+
+.programs__item--active .programs__icon--internship {
+  background-image: url("../img/icon-internship-active.png");
+}
+
+.programs__item--active .programs__icon--volunteer {
+  background-image: url("../img/icon-volunteer-active.png");
+}
+
+.programs__item--active .programs__icon--religion {
+  background-image: url("../img/icon-religion-active.png");
+}
+
+.programs__icon {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+
+  display: block;
+  width: 36px;
+  height: 36px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--common {
+    background-image: url("../img/icon-common.png");
+  }
+
+  &--academic {
+    background-image: url("../img/icon-academic.png");
+  }
+
+  &--internship {
+    background-image: url("../img/icon-internship.png");
+  }
+
+  &--volunteer {
+    background-image: url("../img/icon-volunteer.png");
+  }
+
+  &--religion {
+    background-image: url("../img/icon-religion.png");
+  }
+}
+
+.programs__desc {
+  max-width: 560px;
+  padding-top: 16px;
+
+  list-style: none;
+}
+
+.programs__desc-item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.programs__desc-title {
+  margin-bottom: 24px;
+
+  font-family: $title-main;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+
+  color: $cyan;
+}
+
+.programs__desc-text {
+  max-width: 550px;
+  margin-bottom: 16px;
+
+  font-family: $main-regular;
+  font-size: 15px;
+  line-height: 26px;
+
+  opacity: 0.87;
+
+  &:last-child {
+    max-width: 510px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .programs {
+    background-position: right -24px top 166px;
+    background-size: 100%;
+  }
+
+  .programs--indent {
+    margin-bottom: 40px;
+  }
+
+  .programs__wrap {
+    width: 100%;
+  }
+
+  .programs__title {
+    margin-bottom: 80px;
+
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+
+  .programs__inner {
+    flex-direction: column;
+  }
+
+  .programs__tabs {
+    display: none;
+  }
+
+  .programs__desc-item {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .programs__desc-title {
+    margin-bottom: 17px;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .programs__desc-text {
+    width: 99%;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
