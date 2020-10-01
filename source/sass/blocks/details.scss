@@ -1,14 +1,14 @@
 .details {
   display: flex;
   padding-top: 46px;
+  padding-bottom: 10px;
 
   background-image: url("../img/watercolor-details-bg.png");
   background-repeat: no-repeat;
   background-position: top -45px left;
   background-size: 100%;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/watercolor-details-bg@2x.png");
   }
 }
@@ -150,8 +150,7 @@
 
   border-radius: 50%;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/details-avatar@2x.jpg");
   }
 }
@@ -199,6 +198,20 @@
 
 .details__curator-social-link {
   display: block;
+
+  color: $grey;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.details__curator-social-link svg {
+  fill: currentColor;
 }
 
 .details__curator-text {
@@ -234,6 +247,11 @@
 
   border: 2px solid #e3e3e3;
   border-radius: 80px;
+
+  &:hover,
+  &:focus {
+    border-color: #ffc341;
+  }
 }
 
 .details__form-field input {
@@ -270,7 +288,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 51px;
   }
 
   .details__title {
@@ -287,14 +305,20 @@
   }
 
   .details__curator--wrap {
-    padding-top: 23px;
+    padding-top: 25px;
   }
 
   .details__curator-wrap {
     max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .details__curator-avatar {
+    margin-bottom: 16px;
   }
 
   .details__curator-text {
+    width: 83%;
     padding-right: 0;
 
     font-size: 16px;
@@ -327,6 +351,7 @@
   .details__form-text {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 12px;
 
     font-size: 16px;
     line-height: 24px;
@@ -337,15 +362,17 @@
   .details__form-field {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .details__form-btn {
     width: 92%;
+    margin-top: 20px;
   }
 
   .details__form-desc {
     width: 100%;
+    margin-bottom: 34px;
     padding: 0;
 
     order: -1;

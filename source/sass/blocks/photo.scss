@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: row-reverse;
   min-height: 583px;
-  padding: 121px 0 150px;
+  padding: 120px 0 150px;
 
   background-image: url("../img/photo-bg.jpg");
   background-repeat: no-repeat;
+  background-color: #f08080;
   background-position: center;
   background-size: cover;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/photo-bg@2x.jpg");
   }
 }
@@ -59,26 +59,49 @@
   text-decoration: none;
 }
 
+.photo__btn svg {
+  position: absolute;
+
+  top: 18px;
+  left: 40px;
+
+  width: 24px;
+  height: 24px;
+
+  fill: currentColor;
+}
+
 @media (max-width: $mobile-width) {
   .photo {
     min-height: auto;
+    padding: 45px 0 5px;
 
     background-image: url("../img/photo-bg-mobile.jpg");
+    background-color: transparent;
+    background-position: center top 165px;
     background-size: contain;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/photo-bg-mobile@2x.jpg");
     }
+  }
+
+  .photo--indent {
+    margin-bottom: 0;
   }
 
   .photo__wrap {
     width: 100%;
     margin: 0 auto;
+    padding-top: 75px;
+  }
+
+  .photo__title {
+    text-align: center;
   }
 
   .photo__text {
-    padding: 22% 7% 15.5%;
+    padding: 22% 7% 2.5%;
 
     font-size: 16px;
     line-height: 26px;
@@ -87,6 +110,6 @@
 
   .photo__btn {
     width: 264px;
-    margin: 0 auto;
+    margin: 50px auto 0;
   }
 }

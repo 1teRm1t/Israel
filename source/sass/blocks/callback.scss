@@ -7,8 +7,7 @@
   background-position: top 100px left, right -1px top -33px;
   background-size: 11%, 60%;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/backpack@2x.png"), url("../img/girl-flag-bg@2x.png");
   }
 }
@@ -48,11 +47,16 @@
 .callback__form-inner {
   border: 2px solid #e3e3e3;
   border-radius: 80px;
+
+  &:hover,
+  &:focus {
+    border-color: #ffc341;
+  }
 }
 
-.callback__field {
+.callback__form-inner input {
   width: 100%;
-  padding: 19px 240px 20px 40px;
+  padding: 18px 240px 20px 40px;
 
   border-radius: 80px;
   border: none;
@@ -77,7 +81,7 @@
   top: 0;
   right: 0;
 
-  padding-top: 23px;
+  padding-top: 21px;
 }
 
 @media (max-width: $mobile-width) {
@@ -88,8 +92,7 @@
     background-position: left -5px top -12px, center bottom 10px;
     background-size: 34%, 100%;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/backpack@2x.png"), url("../img/girl-flag-bg-mobile@2x.png");
     }
   }

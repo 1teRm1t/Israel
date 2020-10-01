@@ -1,14 +1,13 @@
 .info {
   padding: 156px 135px 120px 51.1%;
 
-  background-image: url("../img/info-bg.png"), url("../img/info-mark-bg.png");
+  background-image: url("../img/info-bg.png"), url("../img/info-mark-bg.png"), url("../img/watercolor-info-bg.png");
   background-repeat: no-repeat;
-  background-position: left 13px top 123px, right -1px top 334px;
-  background-size: 42.5%, 16%;
+  background-position: left 13px top 123px, right -1px top 334px, left 10px top -65px;
+  background-size: 42.5%, 16%, 98%;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
-    background-image: url("../img/info-bg@2x.png"), url("../img/info-mark-bg@2x.png");
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/info-bg@2x.png"), url("../img/info-mark-bg@2x.png"), url("../img/watercolor-info-bg@2x.png");
   }
 }
 
@@ -163,8 +162,7 @@
     background-position: right -2px top 344px;
     background-size: 68%;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/info-mark-bg-mobile@2x.png");
     }
   }

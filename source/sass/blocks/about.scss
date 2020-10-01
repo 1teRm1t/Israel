@@ -75,6 +75,19 @@
   border: none;
   cursor: pointer;
 
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 21px;
+    left: 27px;
+
+    width: 15px;
+    height: 19px;
+
+    background-image: url("../img/about-play-icon.svg");
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -91,13 +104,12 @@
     opacity: 0.32;
   }
 
-  svg {
-    position: absolute;
+  &:hover::before {
+    background-image: url("../img/about-play-icon-active.svg");
+  }
 
-    top: 21px;
-    left: 27px;
-
-    z-index: 1;
+  &:active {
+    transform: scale(0.8);
   }
 }
 
@@ -150,6 +162,11 @@
 
     width: 53px;
     height: 53px;
+
+    &::before {
+      top: 17px;
+      left: 21px;
+    }
 
     &::after {
       top: -13px;

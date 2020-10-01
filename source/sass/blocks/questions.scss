@@ -3,14 +3,13 @@
   padding-top: 82px;
   padding-bottom: 129px;
 
-  background-image: url("../img/questions-bag-bg.png"), url("../img/questions-bg.png");
+  background-image: url("../img/questions-bag-bg.png"), url("../img/questions-bg.png"), url("../img/watercolor-questions-bg.png");
   background-repeat: no-repeat;
-  background-position: top 808px left, right top 81px;
-  background-size: 11.3%, 47.3%;
+  background-position: top 808px left, right top 81px, center top;
+  background-size: 11.3%, 47.3%, 100%;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
-    background-image: url("../img/questions-bag-bg@2x.png"), url("../img/questions-bg@2x.png");
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/questions-bag-bg@2x.png"), url("../img/questions-bg@2x.png"), url("../img/watercolor-questions-bg@2x.png");
   }
 }
 
@@ -138,11 +137,13 @@
 
 @media (max-width: $mobile-width) {
   .questions {
-    background-image: url('../img/questions-bag-bg.png');
+    padding-top: 76px;
+    padding-bottom: 84px;
+
+    background-image: url("../img/questions-bag-bg.png");
     background-position: top 701px left -5px;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/questions-bag-bg@2x.png");
     }
   }

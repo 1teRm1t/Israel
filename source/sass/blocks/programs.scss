@@ -32,11 +32,9 @@
   display: flex;
 }
 
-.programs__tabs {
-  margin-right: 63px;
-}
-
 .programs__list {
+  margin-right: 63px;
+
   list-style: none;
 }
 
@@ -241,7 +239,7 @@
     flex-direction: column;
   }
 
-  .programs__tabs {
+  .programs__list {
     display: none;
   }
 
