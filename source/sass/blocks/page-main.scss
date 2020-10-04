@@ -1,0 +1,9 @@
+.page-main {
+  min-height: calc(100vh - 67px);
+}
+
+@media (max-width: $mobile-width) {
+  .page-main {
+    min-height: calc(100vh - 177px);
+  }
+}
