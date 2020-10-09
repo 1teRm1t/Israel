@@ -85,20 +85,12 @@
 
 .feedback__text {
   margin-bottom: 17px;
-}
-
-.feedback__desc {
-  margin-bottom: 17px;
 
   font-family: $main-regular;
   font-size: 17px;
   line-height: 29px;
 
   opacity: 0.74;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .feedback__other {
@@ -107,7 +99,7 @@
   min-height: 114px;
 }
 
-.feedback__other-link {
+.feedback__link {
   font-family: $main-regular;
   font-size: 17px;
   line-height: 25px;
@@ -119,7 +111,7 @@
 .feedback__social-list {
   display: flex;
   justify-content: space-between;
-  align-self: flex-end;
+  flex-wrap: wrap;
   width: 95px;
   margin-left: auto;
 
@@ -127,7 +119,11 @@
 }
 
 .feedback__social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
 
   color: $grey;
 
@@ -208,6 +204,7 @@
   }
 
   .feedback__wrap {
+    position: relative;
     width: 90%;
   }
 
@@ -237,10 +234,8 @@
   }
 
   .feedback__text {
-    margin-bottom: 24px;
-  }
+    margin-bottom: 19px;
 
-  .feedback__desc {
     font-size: 16px;
     line-height: 26px;
   }
@@ -250,7 +245,7 @@
     min-height: auto;
   }
 
-  .feedback__other-link {
+  .feedback__link {
     margin-bottom: 22px;
 
     font-size: 16px;
@@ -258,8 +253,20 @@
   }
 
   .feedback__social-list {
-    align-self: flex-start;
     width: 100px;
-    margin: 0;
+    margin: 20px 0 0 0;
+  }
+
+  .feedback__pagination {
+    position: absolute;
+    top: 355px;
+    left: 33%;
+
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .feedback__count {
+    margin-right: 26px;
   }
 }

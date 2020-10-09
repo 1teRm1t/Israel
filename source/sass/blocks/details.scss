@@ -197,7 +197,11 @@
 }
 
 .details__curator-social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
 
   color: $grey;
 
