@@ -186,7 +186,7 @@
 
 @media (max-width: $mobile-width) {
   .feedback {
-    padding-top: 30px;
+    padding-top: 0;
     padding-bottom: 30px;
 
     background-image: url("../img/feedback-bg.png");
@@ -234,7 +234,7 @@
   }
 
   .feedback__text {
-    margin-bottom: 19px;
+    margin-bottom: 17px;
 
     font-size: 16px;
     line-height: 26px;
