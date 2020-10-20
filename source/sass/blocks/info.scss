@@ -1,5 +1,5 @@
 .info {
-  padding: 156px 135px 120px 51.1%;
+  padding: 156px 135px 89px 51.1%;
 
   background-image: url("../img/info-bg.png"), url("../img/info-mark-bg.png"), url("../img/watercolor-info-bg.png");
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
   }
 }
 
-.info__title {
+.info__wrap h2 {
   margin-bottom: 24px;
 
   font-family: $title-main;
@@ -23,8 +23,8 @@
   color: $cyan;
 }
 
-.info__text {
-  max-width: 480px;
+.info__wrap p {
+  width: 100%;
   margin-bottom: 32px;
 
   font-family: $main-regular;
@@ -34,7 +34,7 @@
   opacity: 0.87;
 }
 
-.info__accent {
+.info__wrap em {
   display: block;
   max-width: 445px;
   margin-bottom: 32px;
@@ -66,11 +66,11 @@
 
   opacity: 0.87;
 
-  &:nth-child(2) {
+  &:nth-child(0n + 2) {
     margin-bottom: 45px;
   }
 
-  &:nth-child(3) {
+  &:nth-child(0n + 3) {
     max-width: 455px;
     margin-bottom: 39px;
 
@@ -79,7 +79,7 @@
     }
   }
 
-  &:nth-child(4)::before {
+  &:nth-child(0n +4)::before {
     top: -4px;
   }
 
@@ -130,7 +130,7 @@
   z-index: 4;
 }
 
-.info__desc {
+.info__wrap p:last-of-type {
   position: relative;
 
   padding-left: 17px;
@@ -172,7 +172,7 @@
     margin: 0 auto;
   }
 
-  .info__title {
+  .info__wrap h2 {
     margin-bottom: 25px;
 
     font-size: 32px;
@@ -180,14 +180,14 @@
     text-align: center;
   }
 
-  .info__text {
+  .info__wrap p {
     margin-bottom: 23px;
 
     font-size: 14px;
     line-height: 22px;
   }
 
-  .info__accent {
+  .info__wrap em {
     font-size: 16px;
     line-height: 26px;
   }
@@ -203,7 +203,7 @@
     font-size: 14px;
     line-height: 22px;
 
-    &:nth-child(2) {
+    &:nth-child(0n +2) {
       margin-bottom: 37px;
 
       &::before {
@@ -211,7 +211,7 @@
       }
     }
 
-    &:nth-child(3) {
+    &:nth-child(0n +3) {
       max-width: 280px;
       margin-bottom: 26px;
 
@@ -220,7 +220,7 @@
       }
     }
 
-    &:nth-child(4)::before {
+    &:nth-child(0n +4)::before {
       top: 13px;
     }
   }
@@ -233,7 +233,7 @@
     left: 10px;
   }
 
-  .info__desc {
+  .info__wrap p:last-of-type {
     padding-left: 8px;
 
     font-size: 14px;

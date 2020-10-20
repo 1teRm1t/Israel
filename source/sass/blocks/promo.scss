@@ -7,7 +7,7 @@
 
   background-image: url("../img/promo-girl.png"), url("../img/promo-text.png"), url("../img/promo-backdrop.jpg");
   background-repeat: no-repeat;
-  background-color: #d2691e;
+  background-color: #d2c0af;
   background-position: center bottom 95%, center 160px, center;
   background-size: cover, 74.5%, cover;
 
@@ -16,7 +16,7 @@
   }
 }
 
-.promo__title {
+.promo h1 {
   max-width: 343px;
   margin: auto auto 281px;
 
@@ -90,7 +90,7 @@
     }
   }
 
-  .promo__title {
+  .promo h1 {
     margin-bottom: 235px;
 
     font-size: 20px;

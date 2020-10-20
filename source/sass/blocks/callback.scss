@@ -17,7 +17,7 @@
   margin-left: 15.3%;
 }
 
-.callback__title {
+.callback__wrap h2 {
   margin-bottom: 24px;
 
   font-family: $title-main;
@@ -29,7 +29,7 @@
   color: $cyan;
 }
 
-.callback__text {
+.callback__wrap p {
   max-width: 400px;
   margin-bottom: 62px;
 
@@ -45,13 +45,9 @@
 }
 
 .callback__form-inner {
-  border: 2px solid #e3e3e3;
+  padding: 2px;
+  background-color: #e3e3e3;
   border-radius: 80px;
-
-  &:hover,
-  &:focus {
-    border-color: #ffc341;
-  }
 }
 
 .callback__form-inner input {
@@ -60,6 +56,7 @@
 
   border-radius: 80px;
   border: none;
+  outline: none;
 
   cursor: pointer;
 
@@ -69,7 +66,7 @@
     line-height: 20px;
     font-variant: small-caps;
 
-    color: #484848;
+    color: $black;
 
     opacity: 0.5;
   }
@@ -79,9 +76,34 @@
   position: absolute;
 
   top: 0;
-  right: 0;
+  right: -1px;
 
-  padding-top: 21px;
+  padding-top: 22px;
+}
+
+@media (max-width: $desktop-width) {
+  .callback {
+    background-position: top 100px left, right -1px top 0;
+    background-size: 11%, 55%;
+  }
+
+  .callback__wrap {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .callback__wrap {
+    margin-left: 10%;
+  }
+
+  .callback__form-inner input {
+    padding-right: 165px;
+  }
+
+  .callback__btn {
+    right: -54px;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -102,14 +124,14 @@
     margin: auto;
   }
 
-  .callback__title {
+  .callback__wrap h2 {
     margin-left: 7px;
 
     font-size: 32px;
     line-height: 39px;
   }
 
-  .callback__text {
+  .callback__wrap p {
     margin-bottom: 23px;
 
     font-size: 16px;
@@ -117,11 +139,11 @@
   }
 
   .callback__form-inner {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
   }
 
   .callback__form-inner input {
-    padding: 18px;
+    padding: 18px 18px 18px 38px;
   }
 
   .callback__field {
@@ -130,8 +152,9 @@
 
   .callback__btn {
     position: relative;
+    right: -1px;
 
-    width: 91.5%;
+    width: 288px;
     margin: 0 auto;
     padding-top: 20px;
   }

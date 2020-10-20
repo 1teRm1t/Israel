@@ -2,15 +2,14 @@
   max-width: 1366px;
   margin: 0 auto;
   padding-top: 88px;
-  padding-bottom: 133px;
+  padding-bottom: 138px;
 
   background-image: url("../img/watercolor-life-bg.png"), url("../img/life-bg.png");
   background-repeat: no-repeat;
   background-position: top 45px left, right -1px bottom 238px;
   background-size: 100%, 7.2%;
 
-  @media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/watercolor-life-bg@2x.png"), url("../img/life-bg@2x.png");
   }
 }
@@ -20,7 +19,7 @@
   margin-left: 7.61%;
 }
 
-.life__title {
+.life__wrap h2 {
   margin-bottom: 24px;
   padding-left: 5px;
 
@@ -38,7 +37,7 @@
   display: none;
 }
 
-.life__text {
+.life__wrap p {
   width: 62%;
   margin: 0 auto -23px;
   padding-right: 5px;
@@ -83,7 +82,7 @@
   width: 20%;
   height: 318px;
   margin-top: 68px;
-  margin-right: 9px;
+  margin-right: 5px;
 }
 
 .life__item:nth-child(0n + 3) {
@@ -161,7 +160,7 @@
     margin: 0 auto;
   }
 
-  .life__title {
+  .life__wrap h2 {
     padding-left: 0;
 
     font-size: 32px;
@@ -169,21 +168,57 @@
   }
 
   .life__indent {
-    display: block;
+    display: none;
   }
 
-  .life__text {
+  .life__wrap p {
     width: 97%;
     margin-right: 10px;
 
     font-size: 16px;
     line-height: 26px;
-    text-align: left;
+    text-align: center;
   }
 
   .life__inner {
     width: 95%;
     margin: 0 auto;
+  }
+
+  .life__list {
+    justify-content: center;
+  }
+
+  .life__item:nth-child(n) {
+    margin: 10px 5px 0 5px;
+  }
+
+  .life__item:nth-child(0n + 1) {
+    width: 100%;
+  }
+
+  .life__item:nth-child(0n + 2) {
+    width: 45%;
+  }
+
+  .life__item:nth-child(0n + 3) {
+    width: 45%;
+  }
+
+  .life__item:nth-child(0n + 4) {
+    width: 45%;
+  }
+
+  .life__item:nth-child(0n + 5) {
+    width: 45%;
+  }
+
+  .life__item:nth-child(n) img {
+    width: 100%;
+  }
+
+  .life__item:nth-child(0n + 1) img {
+    object-position: 100% 0;
   }
 
   .life__item-text {
@@ -196,6 +231,7 @@
 
 @media (max-width: $mobile-width) {
   .life {
+    padding-top: 36px;
     padding-bottom: 0;
   }
 
@@ -203,12 +239,21 @@
     margin-bottom: 41px;
   }
 
+  .life__indent {
+    display: block;
+  }
+
+  .life__wrap p {
+    text-align: left;
+  }
+
   .life__inner {
     width: 90%;
-    padding-bottom: 15px;
+    padding-bottom: 28px;
   }
 
   .life__list {
+    justify-content: flex-start;
     flex-wrap: nowrap;
     min-width: 520%;
     padding-left: 0;
@@ -219,12 +264,19 @@
     height: initial;
     margin: 0;
     margin-right: initial;
-    padding: 28% 0 0 0;
+    padding: 27% 0 0 0;
+  }
+
+  .life__item:nth-child(n) img {
+    width: 93%;
+    height: 100%;
+    padding-top: 4px;
+    padding-left: 10px;
   }
 
   .life__item p {
-    left: 25px;
-    bottom: 16px;
+    left: 29px;
+    bottom: 25px;
 
     width: 80%;
 

@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   align-items: center;
 
-  width: 83.6%;
+  width: 83.8%;
   margin: 0 auto;
 }
 
@@ -30,7 +30,12 @@
 
 .page-header__logo {
   display: block;
-  padding-right: 24px;
+  padding-right: 25px;
+}
+
+.page-header__logo img {
+  width: 137px;
+  height: 48px;
 }
 
 .page-header__link {
@@ -68,6 +73,8 @@
   }
 
   .page-header__wrap {
+    position: relative;
+
     width: 95%;
   }
 
@@ -84,9 +91,17 @@
     order: -1;
   }
 
+  .page-header__logo img {
+    width: 120px;
+    height: 42px;
+  }
+
   .page-header__link {
-    margin: 0 0 0 auto;
-    margin-top: -18px;
+    position: absolute;
+    top: 42px;
+    right: 0;
+
+    margin: -17px 2px 0 auto;
 
     font-size: 14px;
     line-height: 17px;

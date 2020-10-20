@@ -24,7 +24,7 @@
   margin-right: 170px;
 }
 
-.photo__title {
+.photo__wrap h2 {
   margin-bottom: 25px;
 
   font-family: $title-main;
@@ -36,7 +36,7 @@
   color: $cyan;
 }
 
-.photo__text {
+.photo__wrap p {
   margin-bottom: 49px;
   padding-left: 4px;
 
@@ -78,7 +78,7 @@
 
     background-image: url("../img/photo-bg-mobile.jpg");
     background-color: transparent;
-    background-position: center top 165px;
+    background-position: center top 120px;
     background-size: contain;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -96,11 +96,11 @@
     padding-top: 75px;
   }
 
-  .photo__title {
+  .photo__wrap h2 {
     text-align: center;
   }
 
-  .photo__text {
+  .photo__wrap p {
     padding: 22% 7% 2.5%;
 
     font-size: 16px;
@@ -111,5 +111,10 @@
   .photo__btn {
     width: 264px;
     margin: 50px auto 0;
+  }
+
+  .photo__btn svg {
+    top: 17px;
+    left: 56px;
   }
 }

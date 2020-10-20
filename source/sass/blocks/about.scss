@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-.about__title {
+.about__wrap h2 {
   margin-bottom: 24px;
 
   font-family: $title-main;
@@ -30,7 +30,7 @@
   color: $cyan;
 }
 
-.about__text {
+.about__wrap p {
   max-width: 690px;
   margin: 0 auto;
 
@@ -129,12 +129,12 @@
     padding-bottom: 0;
   }
 
-  .about__title {
+  .about__wrap h2 {
     font-size: 32px;
     line-height: 39px;
   }
 
-  .about__text {
+  .about__wrap p {
     font-size: 16px;
     line-height: 26px;
 

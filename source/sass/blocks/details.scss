@@ -20,8 +20,29 @@
   margin-left: auto;
 }
 
-.details__title {
+.details__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 62px;
+}
+
+.details__curator,
+.details__form {
+  width: 50%;
+  margin-bottom: 64px;
+}
+
+.details__map {
+  width: 55%;
+}
+
+.details__curator--wrap {
+  width: 44.2%;
+}
+
+.details__curator h2 {
   width: 100%;
+  margin-bottom: 50px;
 
   font-family: $title-main;
   font-size: 40px;
@@ -32,23 +53,11 @@
   color: $cyan;
 }
 
-.details__curator,
-.details__map,
-.details__form {
-  width: 50%;
-  margin-bottom: 64px;
-}
-
-.details__curator--wrap {
-  width: 44.2%;
-  padding-top: 49px;
-}
-
 .details__map--wrap {
   position: relative;
 
   flex-grow: 1;
-  margin-top: -44px;
+  margin-top: 7px;
 
   &::before {
     position: absolute;
@@ -73,13 +82,16 @@
   width: 100%;
 }
 
-.details__city {
+.details__curator em {
   position: relative;
+
+  display: block;
   margin-bottom: 41px;
   padding-left: 22px;
 
   font-family: $main-regular;
   font-size: 15px;
+  font-style: normal;
   line-height: 22px;
 
   opacity: 0.74;
@@ -101,7 +113,7 @@
   }
 }
 
-.details__city a {
+.details__city {
   position: relative;
   margin-left: 17px;
 
@@ -157,7 +169,7 @@
 
 .details__curator-wrap {
   max-width: 270px;
-  margin-bottom: 25px;
+  margin-bottom: 34px;
 }
 
 .details__curator-name {
@@ -218,7 +230,7 @@
   fill: currentColor;
 }
 
-.details__curator-text {
+.details__curator p:last-of-type {
   padding-right: 70px;
 
   font-family: $main-regular;
@@ -234,7 +246,7 @@
   align-items: center;
 }
 
-.details__form-text {
+.details__form p {
   width: 26%;
   margin-right: 4%;
 
@@ -248,14 +260,10 @@
 .details__form-field {
   width: 20%;
   margin-right: 1.9%;
+  padding: 2px;
 
-  border: 2px solid #e3e3e3;
+  background-color: #e3e3e3;
   border-radius: 80px;
-
-  &:hover,
-  &:focus {
-    border-color: #ffc341;
-  }
 }
 
 .details__form-field input {
@@ -264,15 +272,27 @@
 
   border: none;
   border-radius: 80px;
+  outline: none;
 
   cursor: pointer;
+
+  &::placeholder {
+    font-family: $main-medium;
+    font-size: 17px;
+    line-height: 20px;
+    font-variant: small-caps;
+
+    color: $black;
+
+    opacity: 0.5;
+  }
 }
 
 .details__form-btn {
   width: 17.2%;
 }
 
-.details__form-desc {
+.details__form span {
   width: 29%;
   padding-top: 7px;
 
@@ -283,8 +303,63 @@
   opacity: 0.5;
 }
 
+@media (max-width: $tablet-width) {
+  .details__wrap {
+    margin: 0 auto;
+  }
+
+  .details__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details__curator--wrap {
+    width: 60%;
+  }
+
+  .details__curator h2 {
+    text-align: center;
+  }
+
+  .details__map {
+    width: 65%;
+  }
+
+  .details__form {
+    width: 100%;
+  }
+
+  .details__form form {
+    justify-content: center;
+  }
+
+  .details__form p {
+    width: 80%;
+    margin: 0 0 20px;
+
+    text-align: center;
+  }
+
+  .details__form-field {
+    width: 40%;
+    margin: 0 20px 25px 0;
+  }
+
+  .details__form-btn {
+    width: 40%;
+  }
+
+  .details__form span {
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .details {
+    padding-top: 24px;
+
     background-image: none;
   }
 
@@ -295,10 +370,8 @@
     margin: 0 auto 51px;
   }
 
-  .details__title {
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
+  .details__inner {
+    margin-bottom: 1px;
   }
 
   .details__curator,
@@ -306,6 +379,14 @@
   .details__form {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .details__curator h2 {
+    margin-bottom: 22px;
+
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
   }
 
   .details__curator--wrap {
@@ -318,27 +399,44 @@
   }
 
   .details__curator-avatar {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
-  .details__curator-text {
+  .details__curator-name {
     width: 83%;
+    margin-bottom: 9px;
     padding-right: 0;
 
     font-size: 16px;
     line-height: 26px;
   }
 
+  .details__curator-name span {
+    margin-right: 1px;
+  }
+
+  .details__curator-wrap address {
+    margin-bottom: 14px;
+  }
+
   .details__map--wrap {
     width: 100%;
     max-width: 420px;
     min-height: 440px;
-    margin-bottom: 44px;
+    margin-bottom: 43px;
 
     overflow: hidden;
+
+    &::before {
+      top: 56%;
+      left: 83%;
+
+      width: 26px;
+      height: 40px;
+    }
   }
 
-  .details__map-img {
+  .details__map img {
     position: absolute;
 
     top: 39px;
@@ -348,11 +446,19 @@
     height: auto;
   }
 
+  .details__curator p:last-of-type {
+    width: 85%;
+    padding-right: 0;
+
+    font-size: 16px;
+    line-height: 26px;
+  }
+
   .details__form form {
     flex-direction: column;
   }
 
-  .details__form-text {
+  .details__form p {
     width: 100%;
     margin-right: 0;
     margin-bottom: 12px;
@@ -364,17 +470,17 @@
   }
 
   .details__form-field {
-    width: 100%;
+    width: 288px;
     margin-right: 0;
     margin-bottom: 5px;
   }
 
   .details__form-btn {
-    width: 92%;
+    width: 288px;
     margin-top: 20px;
   }
 
-  .details__form-desc {
+  .details__form span {
     width: 100%;
     margin-bottom: 34px;
     padding: 0;

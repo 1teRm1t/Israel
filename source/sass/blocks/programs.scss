@@ -16,7 +16,7 @@
   margin: 0 auto;
 }
 
-.programs__title {
+.programs__wrap h2 {
   margin-bottom: 67px;
 
   font-family: $title-main;
@@ -186,7 +186,7 @@
   }
 }
 
-.programs__desc-title {
+.programs__desc-item h3 {
   margin-bottom: 24px;
 
   font-family: $title-main;
@@ -197,7 +197,7 @@
   color: $cyan;
 }
 
-.programs__desc-text {
+.programs__desc-item p {
   max-width: 550px;
   margin-bottom: 16px;
 
@@ -227,8 +227,8 @@
     width: 100%;
   }
 
-  .programs__title {
-    margin-bottom: 80px;
+  .programs__wrap h2 {
+    margin-bottom: 17px;
 
     font-size: 32px;
     line-height: 39px;
@@ -240,7 +240,46 @@
   }
 
   .programs__list {
-    display: none;
+    display: flex;
+    margin-right: 0;
+
+    overflow: hidden;
+
+    &:hover {
+      overflow-x: auto;
+    }
+  }
+
+  .programs__item {
+    min-height: 48px;
+    margin-bottom: 0;
+    padding-left: 51px;
+    padding-right: 12px;
+  }
+
+  .programs__item--active {
+    width: auto;
+
+    border-radius: 60.6704px;
+
+    &::after {
+      border: none;
+    }
+  }
+
+  .programs__icon {
+    top: 8px;
+    left: 13px;
+
+    width: 30px;
+    height: 30px;
+
+    background-size: contain;
+  }
+
+  .programs__desc {
+    min-height: 422px;
+    padding-top: 32px;
   }
 
   .programs__desc-item {
@@ -248,15 +287,16 @@
     padding-right: 16px;
   }
 
-  .programs__desc-title {
+  .programs__desc-item h3 {
     margin-bottom: 17px;
 
     font-size: 24px;
     line-height: 29px;
   }
 
-  .programs__desc-text {
+  .programs__desc-item p {
     width: 99%;
+    margin-bottom: 14px;
 
     font-size: 14px;
     line-height: 22px;
