@@ -241,7 +241,7 @@
     var slideIndex = 3;
     showSlides(slideIndex);
 
-    function nextSlide() {
+    function getNextSlide() {
       page++;
       var nextPage = page + 1;
       numberPage.innerHTML = nextPage + ' / 6';
@@ -251,7 +251,7 @@
       showSlides(slideIndex += 1);
     }
 
-    function prevSlide() {
+    function getPrevSlide() {
       page--;
       var prevPage = page + 1;
       numberPage.innerHTML = prevPage + ' / 6';
@@ -278,12 +278,12 @@
     }
 
     prev.addEventListener('click', function () {
-      prevSlide();
+      getPrevSlide();
       next.disabled = false;
     });
 
     next.addEventListener('click', function () {
-      nextSlide();
+      getNextSlide();
       prev.disabled = false;
     });
 
