@@ -11,7 +11,7 @@
     };
   }
 
-  var scrollButton = document.querySelector('.promo__btn');
+  var scrollBtn = document.querySelector('.promo__btn');
 
   var onScrollButtonClickDocumentScroll = function () {
     var elem = document.querySelector('#about');
@@ -23,7 +23,7 @@
     });
   };
 
-  scrollButton.addEventListener('click', onScrollButtonClickDocumentScroll);
+  scrollBtn.addEventListener('click', onScrollButtonClickDocumentScroll);
 
   window.addEventListener('DOMContentLoaded', function () {
 
@@ -88,7 +88,6 @@
     var nameStorage = '';
     var phoneStorage = '';
 
-
     try {
       nameStorage = localStorage.getItem('name');
     } catch (err) {
@@ -128,6 +127,24 @@
       callbackForm.reset();
     });
 
+    var sendForm = function (form) {
+      var xhr = new XMLHttpRequest();
+
+      xhr.open('POST', 'https://echo.htmlacademy.ru');
+      xhr.send(form);
+    };
+
+    form.addEventListener('submit', function (evt) {
+      sendForm(new FormData(form));
+      evt.preventDefault();
+      popupCallback.classList.remove('modal--callback--show');
+      popupAccept.classList.add('modal--accept--show');
+      overlay.classList.add('modal-overlay--show');
+      document.body.style.position = bodyFixed;
+      document.body.style.width = bodyFullWidth;
+      form.reset();
+    });
+
     close.addEventListener('click', function (evt) {
       evt.preventDefault();
       popupCallback.classList.remove('modal--callback--show');
@@ -146,24 +163,6 @@
       document.body.style.width = bodyInitialWidth;
       name.value = '';
       phone.value = '';
-    });
-
-    var sendForm = function (form) {
-      var xhr = new XMLHttpRequest();
-
-      xhr.open('POST', 'https://echo.htmlacademy.ru');
-      xhr.send(form);
-    };
-
-    form.addEventListener('submit', function (evt) {
-      sendForm(new FormData(form));
-      evt.preventDefault();
-      popupCallback.classList.remove('modal--callback--show');
-      popupAccept.classList.add('modal--accept--show');
-      overlay.classList.add('modal-overlay--show');
-      document.body.style.position = bodyFixed;
-      document.body.style.width = bodyFullWidth;
-      form.reset();
     });
 
     popupAcceptBtn.addEventListener('click', function (evt) {
@@ -232,60 +231,52 @@
       });
     });
 
-
-    var prev = document.querySelector('.feedback__arrow--prev');
-    var next = document.querySelector('.feedback__arrow--next');
-    var numberPage = document.querySelector('.feedback__count span');
+    var slides = document.querySelectorAll('.feedback__item');
+    var prev = document.querySelectorAll('.feedback__arrow--prev');
+    var next = document.querySelectorAll('.feedback__arrow--next');
     var page = 2;
 
-    var slideIndex = 3;
-    showSlides(slideIndex);
+    var getActiveSlide = function (item) {
+      slides.forEach(function (slide) {
+        slide.classList.remove('feedback__item--active');
+      });
+      slides[item].classList.add('feedback__item--active');
+    };
 
-    function nextSlide() {
-      page++;
-      var nextPage = page + 1;
-      numberPage.innerHTML = nextPage + ' / 6';
-      if (page === 5) {
-        next.disabled = true;
+    var getNextSlide = function () {
+      if (page === slides.length - 1) {
+        page = 0;
+        getActiveSlide(page);
+      } else {
+        page++;
+        getActiveSlide(page);
       }
-      showSlides(slideIndex += 1);
     }
 
-    function prevSlide() {
-      page--;
-      var prevPage = page + 1;
-      numberPage.innerHTML = prevPage + ' / 6';
+    var getPrevSlide = function () {
       if (page === 0) {
-        prev.disabled = true;
+        page = slides.length - 1;
+        getActiveSlide(page);
+      } else {
+        page--;
+        getActiveSlide(page);
       }
-      showSlides(slideIndex -= 1);
     }
 
-    function showSlides(item) {
-      var slides = document.querySelectorAll('.feedback__item');
+    var showNextSlide = function () {
+      next.forEach(function (item) {
+        item.addEventListener('click', getNextSlide);
+      });
+    };
 
-      if (item > slides.length) {
-        slideIndex = 1;
-      }
-      if (item < 1) {
-        slideIndex = slides.length;
-      }
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-      }
+    var showPrevSlide = function () {
+      prev.forEach(function (item) {
+        item.addEventListener('click', getPrevSlide);
+      });
+    };
 
-      slides[slideIndex - 1].style.display = 'block';
-    }
-
-    prev.addEventListener('click', function () {
-      prevSlide();
-      next.disabled = false;
-    });
-
-    next.addEventListener('click', function () {
-      nextSlide();
-      prev.disabled = false;
-    });
+    showNextSlide();
+    showPrevSlide();
 
 
     document.addEventListener('DOMContentLoaded', function () {

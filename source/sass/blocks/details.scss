@@ -203,7 +203,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 95px;
+  width: 92px;
 
   list-style: none;
 }
@@ -286,10 +286,6 @@
 
     opacity: 0.5;
   }
-}
-
-.details__form-btn {
-  width: 17.2%;
 }
 
 .details__form span {
@@ -382,7 +378,7 @@
   }
 
   .details__curator h2 {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
 
     font-size: 32px;
     line-height: 39px;
@@ -399,7 +395,7 @@
   }
 
   .details__curator-avatar {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .details__curator-name {
@@ -465,6 +461,7 @@
 
     font-size: 16px;
     line-height: 24px;
+    text-align: left;
 
     order: -2;
   }
@@ -476,7 +473,7 @@
   }
 
   .details__form-btn {
-    width: 288px;
+    width: 264px;
     margin-top: 20px;
   }
 
@@ -484,6 +481,8 @@
     width: 100%;
     margin-bottom: 34px;
     padding: 0;
+
+    text-align: left;
 
     order: -1;
   }

@@ -13218,7 +13218,7 @@
         mySwiper.destroy(false, true);
       } else {
         mySwiper.destroy(false, true);
-        mySwiper = new Swiper(mySwiper, parameters);
+        mySwiper = new Swiper(slider, parameters);
       }
     }, 250);
   });

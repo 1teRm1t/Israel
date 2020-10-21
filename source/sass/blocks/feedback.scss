@@ -84,13 +84,17 @@
 }
 
 .feedback__text {
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 
   font-family: $main-regular;
   font-size: 17px;
   line-height: 29px;
 
   opacity: 0.74;
+
+  &:last-of-type {
+    margin-bottom: 13px;
+  }
 }
 
 .feedback__other {
@@ -112,10 +116,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 105px;
-  margin-top: 52px;
+  width: 102px;
   margin-left: auto;
-  margin-bottom: 8px;
 
   list-style: none;
 }
@@ -144,12 +146,13 @@
 
 .feedback__pagination {
   display: flex;
-  margin-top: -34px;
-  padding-left: 34.5%;
+  align-items: center;
+  margin-top: 52px;
 }
 
 .feedback__count {
-  margin-right: 24px;
+  width: 36px;
+  margin-right: 23px;
 
   font-family: $main-regular;
   font-size: 17px;
@@ -160,7 +163,6 @@
 
 .feedback__controls {
   display: flex;
-  padding-top: 2px;
 }
 
 .feedback__arrow {
@@ -211,7 +213,10 @@
   }
 
   .feedback__item {
-    padding: 403px 0 0 0;
+    position: relative;
+
+    flex-direction: column-reverse;
+    padding: 354px 0 20px 0;
 
     background-image: url("../img/feedback-photo-author-mobile.jpg");
     background-position: center top 24px;
@@ -220,6 +225,11 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/feedback-photo-author-mobile@2x.jpg");
     }
+  }
+
+  .feedback__item-inner {
+    display: flex;
+    flex-direction: column;
   }
 
   .feedback__author {
@@ -240,6 +250,10 @@
 
     font-size: 16px;
     line-height: 26px;
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
   }
 
   .feedback__other {
@@ -248,27 +262,29 @@
   }
 
   .feedback__link {
-    margin-bottom: 22px;
+    margin-bottom: 26px;
 
     font-size: 16px;
     line-height: 24px;
   }
 
   .feedback__social-list {
-    width: 100px;
-    margin: 20px 0 0 0;
+    position: absolute;
+    left: -3px;
+    bottom: 0;
+
+    width: 103px;
   }
 
   .feedback__pagination {
-    position: absolute;
-    top: 355px;
-    left: 50%;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 24px;
 
-    margin: 0 0 0 -48px;
-    padding-left: 0;
+    order: -1;
   }
 
   .feedback__count {
-    margin-right: 26px;
+    margin-right: 23px;
   }
 }

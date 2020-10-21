@@ -243,10 +243,11 @@
     display: flex;
     margin-right: 0;
 
-    overflow: hidden;
+    overflow: auto;
 
-    &:hover {
-      overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
     }
   }
 

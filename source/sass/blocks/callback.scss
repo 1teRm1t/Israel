@@ -98,11 +98,14 @@
   }
 
   .callback__form-inner input {
-    padding-right: 165px;
+    padding-right: 145px;
+    padding-left: 25px;
   }
 
   .callback__btn {
     right: -54px;
+
+    padding-right: 20px;
   }
 }
 
@@ -139,23 +142,21 @@
   }
 
   .callback__form-inner {
-    margin-bottom: 10px;
+    width: 288px;
+    margin: 0 auto 8px;
   }
 
   .callback__form-inner input {
-    padding: 18px 18px 18px 38px;
-  }
-
-  .callback__field {
-    padding: 19px 38px 18px;
+    padding: 19px 26px 18px 39px;
   }
 
   .callback__btn {
     position: relative;
     right: -1px;
 
-    width: 288px;
+    width: 264px;
     margin: 0 auto;
     padding-top: 20px;
+    padding-right: 43px;
   }
 }
