@@ -47,7 +47,12 @@
           грант от 4200 до 8400$.
         </p>
         <div class="about__video-wrap">
-          <video class="about__video" src="#"></video>
+          <picture>
+            <source type="image/webp" srcset="img/about-video-bg.webp 1x, img/about-video-bg@2x.webp 2x">
+            <!-- 1х: 870px; 2x: 1740px -->
+            <img src="img/about-video-bg.png" srcset="img/about-video-bg@2x.png 2x" loading="lazy" alt="Превью видео"
+              width="870" height="460">
+          </picture>
           <button class="about__btn" type="button" aria-label="Воспроизвести"></button>
         </div>
       </div>
@@ -559,7 +564,6 @@
           </li>
         </ul>
       </div>
-
     </section>
 
     <section class="details lazyload">
