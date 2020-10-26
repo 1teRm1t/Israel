@@ -251,7 +251,7 @@
         page++;
         getActiveSlide(page);
       }
-    }
+    };
 
     var getPrevSlide = function () {
       if (page === 0) {
@@ -261,7 +261,7 @@
         page--;
         getActiveSlide(page);
       }
-    }
+    };
 
     var showNextSlide = function () {
       next.forEach(function (item) {
